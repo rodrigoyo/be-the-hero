@@ -19,6 +19,24 @@ const app = express();
  * Route params: Parâmetros utilizados para identificar recursos
  * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
  */
+
+/**
+ * Banco de dados no mercado
+ * SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+ * NoSQL: MongoDB, CouchDB, etc
+ */
+
+/**
+ * Como acessar a base de dados utilizando:
+ * - Driver: SELECT * FROM users
+ * - Query Builder: table('users').select('*').where()
+ */
+
+/**
+ * Nesse projeto o banco de dados utilizado será o SQLite
+ * e como Query Builder o Knex
+ */
+
 app.get("/", (request, response) => {
   return response.send("Hello World!!!");
 });
