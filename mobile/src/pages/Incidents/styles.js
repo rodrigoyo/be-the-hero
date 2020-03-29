@@ -61,9 +61,15 @@ export default StyleSheet.create({
     color: "#737380"
   },
 
-  detailButton: {
+  detailsButton: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center"
+  },
+
+  detailsButtonText: {
+    color: "#e02041",
+    fontSize: 15,
+    fontWeight: "bold"
   }
 });
