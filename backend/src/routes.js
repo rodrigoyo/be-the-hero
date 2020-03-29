@@ -19,7 +19,7 @@ routes.post(
       email: Joi.string()
         .required()
         .email(),
-      whatsapp: Joi.number()
+      whatsapp: Joi.string()
         .required()
         .min(10)
         .max(11),
@@ -42,11 +42,15 @@ routes.get(
   ProfileController.index
 );
 
-routes.get("/incidents",celebrate({
-  [Segments.QUERY]: Joi.object().keys({
-    page: Joi.number()
-  })
-}), IncidentController.index);
+routes.get(
+  "/incidents",
+  celebrate({
+    [Segments.QUERY]: Joi.object().keys({
+      page: Joi.number()
+    })
+  }),
+  IncidentController.index
+);
 routes.post("/incidents", IncidentController.create);
 
 routes.delete(
