@@ -1,10 +1,10 @@
 import React from "react";
-import { Text, View } from "react-native";
 
 import Routes from "./src/routes";
 
+import { YellowBox } from "react-native";
+YellowBox.ignoreWarnings(["Remote debugger"]);
+
 export default function App() {
-  return (
-    <Routes />
-  );
+  return <Routes />;
 }
