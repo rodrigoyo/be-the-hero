@@ -10,8 +10,7 @@ app.use(express.json());
 app.use(routes);
 app.use(errors());
 
-app.listen(3333);
-
+module.exports = app;
 /**
  * GET: Buscar/listar uma informação do back-end
  * POST: Criar uma informação no back-end
